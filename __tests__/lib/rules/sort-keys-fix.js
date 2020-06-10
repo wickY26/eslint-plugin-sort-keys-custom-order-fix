@@ -169,6 +169,8 @@ const test = {
     { code: "var obj = {A:3, '11':2, 2:4, 1:1}", options: ['desc', { natural: true, caseSensitive: false }] },
     { code: "var obj = {è:4, À:3, 'Z':2, '#':1}", options: ['desc', { natural: true, caseSensitive: false }] },
 
+    // custom
+    { code: 'var obj = {e:5, d:4, a:1, c:3, b:2}', options: ['custom', { order: ['a', 'c', 'b'] }] },
     // desc, natural, insensitive, minKeys should ignore unsorted keys when number of keys is less than minKeys
     // { code: "var obj = {a:1, _:2, b:3}", options: ["desc", { natural: true, caseSensitive: false, minKeys: 4 }] }
   ],
@@ -755,6 +757,13 @@ const test = {
       output: "var obj = {À:3, '#':1, è:4, 'Z':2}",
     },
 
+    // custom
+    {
+      code: 'var obj = {a:1, b:2, c:3}',
+      errors: ["Expected object keys to be in customending order. 'c' should be before 'b'."],
+      output: 'var obj = {a:1, c:3, b:2}',
+      options: ['custom', { order: ['a', 'c', 'b'] }],
+    },
     // desc, natural, insensitive should error when number of keys is greater than or equal to minKeys
     // {
     //   code: 'var obj = {a:1, _:2, b:3}',
