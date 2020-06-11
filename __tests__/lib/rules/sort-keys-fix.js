@@ -170,7 +170,7 @@ const test = {
     { code: "var obj = {è:4, À:3, 'Z':2, '#':1}", options: ['desc', { natural: true, caseSensitive: false }] },
 
     // custom
-    { code: 'var obj = {e:5, d:4, a:1, c:3, b:2}', options: ['custom', { order: ['a', 'c', 'b'] }] },
+    { code: 'var obj = {a:1, c:3, b:2, e:5, d:4}', options: ['custom', { order: ['a', 'c', 'b'] }] },
     // desc, natural, insensitive, minKeys should ignore unsorted keys when number of keys is less than minKeys
     // { code: "var obj = {a:1, _:2, b:3}", options: ["desc", { natural: true, caseSensitive: false, minKeys: 4 }] }
   ],
