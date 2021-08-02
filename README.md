@@ -1,4 +1,4 @@
-# eslint-plugin-sort-keys-fix
+# eslint-plugin-sort-keys-custom-order-fix
 
 Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with autofix enabled
 
@@ -10,13 +10,13 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-sort-keys-fix`:
+Next, install `eslint-plugin-sort-keys-custom-order-fix`:
 
 ```
-$ npm install eslint-plugin-sort-keys-fix --save-dev
+$ npm install eslint-plugin-sort-keys-custom-order-fix --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-sort-keys-fix` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-sort-keys-custom-order-fix` globally.
 
 ## Usage
 
@@ -24,20 +24,17 @@ Add `sort-keys-fix` to the plugins section of your `.eslintrc` configuration fil
 
 ```json
 {
-  "plugins": [
-    "sort-keys-fix"
-  ]
+  "plugins": ["sort-keys-fix"]
 }
 ```
-
 
 Then add sort-keys-fix rule under the rules section.
 
 ```json
 {
-    "rules": {
-        "sort-keys-fix/sort-keys-fix": "warn"
-    }
+  "rules": {
+    "sort-keys-fix/sort-keys-fix": "warn"
+  }
 }
 ```
 
@@ -62,8 +59,3 @@ Often it makes sense to enable `sort-keys-fix` only for certain files/directorie
 ## Rule configuration
 
 For available config options, see [official sort-keys reference](https://eslint.org/docs/rules/sort-keys#require-object-keys-to-be-sorted-sort-keys). All options supported by `sort-keys`, besides `minKeys`, are supported by `sort-keys-fix`.
-
-
-
-
-

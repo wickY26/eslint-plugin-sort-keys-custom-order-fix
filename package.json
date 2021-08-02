@@ -1,17 +1,28 @@
 {
-  "name": "eslint-plugin-sort-keys-fix",
+  "name": "eslint-plugin-sort-keys-custom-order-fix",
   "version": "0.1.0",
-  "description": "Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with autofix enabled",
+  "description": "Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with a custom order and autofix enabled",
+  "license": "MIT",
   "repository": {
-    "url": "https://github.com/leo-buneev/eslint-plugin-sort-keys-fix",
-    "type": "git"
+    "type": "git",
+    "url": "git+https://github.com/brenopolanski/eslint-plugin-sort-keys-custom-order-fix.git"
+  },
+  "author": {
+    "name": "Breno Polanski",
+    "email": "breno.polanski@gmail.com",
+    "url": "https://brenopolanski.com"
   },
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "eslint-plugin-sort-keys",
+    "eslint-plugin-sort-keys-custom-order"
   ],
-  "author": "Leonid Buneev <buneev.leonid@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/brenopolanski/eslint-plugin-sort-keys-custom-order-fix/issues"
+  },
+  "homepage": "https://github.com/brenopolanski/eslint-plugin-sort-keys-custom-order-fix#readme",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint ./lib",
@@ -41,6 +52,5 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "license": "ISC"
+  }
 }
