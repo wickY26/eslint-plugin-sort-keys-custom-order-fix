@@ -20,27 +20,27 @@ $ npm install eslint-plugin-sort-keys-custom-order-fix --save-dev
 
 ## Usage
 
-Add `sort-keys-fix` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `sort-keys-custom-order-fix` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
-  "plugins": ["sort-keys-fix"]
+  "plugins": ["sort-keys-custom-order-fix"]
 }
 ```
 
-Then add sort-keys-fix rule under the rules section.
+Then add sort-keys-custom-order-fix rule under the rules section.
 
 ```json
 {
   "rules": {
-    "sort-keys-fix/sort-keys-fix": "warn"
+    "sort-keys-custom-order-fix/sort-keys-custom-order-fix": "warn"
   }
 }
 ```
 
-Often it makes sense to enable `sort-keys-fix` only for certain files/directories. For cases like that, use override key of eslint config:
+Often it makes sense to enable `sort-keys-custom-order-fix` only for certain files/directories. For cases like that, use override key of eslint config:
 
-```jsonc
+```json
 {
   "rules": {
     // ...
@@ -49,7 +49,7 @@ Often it makes sense to enable `sort-keys-fix` only for certain files/directorie
     {
       "files": ["src/alphabetical.js", "bin/*.js", "lib/*.js"],
       "rules": {
-        "sort-keys-fix/sort-keys-fix": "warn"
+        "sort-keys-custom-order-fix/sort-keys-custom-order-fix": "warn"
       }
     }
   ]
@@ -58,4 +58,4 @@ Often it makes sense to enable `sort-keys-fix` only for certain files/directorie
 
 ## Rule configuration
 
-For available config options, see [official sort-keys reference](https://eslint.org/docs/rules/sort-keys#require-object-keys-to-be-sorted-sort-keys). All options supported by `sort-keys`, besides `minKeys`, are supported by `sort-keys-fix`.
+For available config options, see [official sort-keys reference](https://eslint.org/docs/rules/sort-keys#require-object-keys-to-be-sorted-sort-keys). All options supported by `sort-keys`, besides `minKeys`, are supported by `sort-keys-custom-order-fix`.

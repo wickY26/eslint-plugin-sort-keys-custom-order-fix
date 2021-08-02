@@ -1,5 +1,5 @@
 /**
- * @fileoverview Tests for sort-keys-fix rule.
+ * @fileoverview Tests for sort-keys-custom-order-fix rule.
  * @author Toru Nagashima
  */
 
@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 
 const path = require('path')
-const rule = require('../../../lib/rules/sort-keys-fix')
+const rule = require('../../../lib/rules/sort-keys-custom-order-fix')
 const RuleTester = require('eslint').RuleTester
 
 // ------------------------------------------------------------------------------
@@ -775,10 +775,10 @@ const test = {
 
 const ruleTester = new RuleTester()
 
-ruleTester.run('sort-keys-fix', rule, test)
+ruleTester.run('sort-keys-custom-order-fix', rule, test)
 
 const babelRuleTester = new RuleTester({
   parser: path.resolve('node_modules/babel-eslint/lib/index.js'),
 })
 
-babelRuleTester.run('babel-eslint/sort-keys-fix', rule, test)
+babelRuleTester.run('babel-eslint/sort-keys-custom-order-fix', rule, test)
