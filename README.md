@@ -38,12 +38,26 @@ Then add `sort-keys-custom-order-fix` rule under the rules section:
 }
 ```
 
-**Example using custom order:**
+**Example using `custom` order:**
 
 ```json
 {
   "rules": {
     "sort-keys-custom-order-fix/sort-keys-custom-order-fix": ["warn", "custom", { "order": ["a", "c", "b"] }]
+  }
+}
+```
+
+**Example using `custom` order + `orderBy`:**
+
+```json
+{
+  "rules": {
+    "sort-keys-custom-order-fix/sort-keys-custom-order-fix": [
+      "warn",
+      "custom",
+      { "orderBy": "asc", "order": ["a", "c", "b"] }
+    ]
   }
 }
 ```
