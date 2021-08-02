@@ -1,6 +1,6 @@
 # eslint-plugin-sort-keys-custom-order-fix
 
-Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with autofix enabled
+Fork of eslint rule that sorts keys in objects (https://eslint.org/docs/rules/sort-keys) with a custom order and autofix enabled.
 
 ## Installation
 
@@ -13,10 +13,10 @@ $ npm i eslint --save-dev
 Next, install `eslint-plugin-sort-keys-custom-order-fix`:
 
 ```
-$ npm install eslint-plugin-sort-keys-custom-order-fix --save-dev
+$ npm i eslint-plugin-sort-keys-custom-order-fix --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-sort-keys-custom-order-fix` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag), then you must also install `eslint-plugin-sort-keys-custom-order-fix` globally.
 
 ## Usage
 
@@ -28,7 +28,7 @@ Add `sort-keys-custom-order-fix` to the plugins section of your `.eslintrc` conf
 }
 ```
 
-Then add sort-keys-custom-order-fix rule under the rules section.
+Then add `sort-keys-custom-order-fix` rule under the rules section:
 
 ```json
 {
