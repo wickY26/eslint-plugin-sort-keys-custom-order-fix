@@ -38,6 +38,16 @@ Then add `sort-keys-custom-order-fix` rule under the rules section:
 }
 ```
 
+**Example using custom order:**
+
+```json
+{
+  "rules": {
+    "sort-keys-custom-order-fix/sort-keys-custom-order-fix": ["warn", "custom", { "order": ["a", "c", "b"] }]
+  }
+}
+```
+
 Often it makes sense to enable `sort-keys-custom-order-fix` only for certain files/directories. For cases like that, use override key of eslint config:
 
 ```jsonc
