@@ -40,7 +40,7 @@ Then add sort-keys-custom-order-fix rule under the rules section.
 
 Often it makes sense to enable `sort-keys-custom-order-fix` only for certain files/directories. For cases like that, use override key of eslint config:
 
-```json
+```jsonc
 {
   "rules": {
     // ...
