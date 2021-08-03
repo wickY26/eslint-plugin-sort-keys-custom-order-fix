@@ -170,6 +170,15 @@ const test = {
     { code: "var obj = {è:4, À:3, 'Z':2, '#':1}", options: ['desc', { natural: true, caseSensitive: false }] },
 
     // custom
+    { code: 'var obj = {e:5, b:2, a:1, c:3, d:4}', options: ['custom', { orderBy: 'asc', order: ['e', 'b'] }] },
+    {
+      code: 'var obj = {a:1, C:3, E:5, b:2, d:4}',
+      options: ['custom', { orderBy: 'asc', order: ['a', 'C'], caseSensitive: true }],
+    },
+    {
+      code: 'var obj = {E:5, C:3, a:1, d:4, b:2}',
+      options: ['custom', { orderBy: 'asc', order: ['E', 'C', 'a', 'd', 'b'], caseSensitive: true }],
+    },
     { code: 'var obj = {a:1, e:5, d:4, c:3, b:2}', options: ['custom', { orderBy: 'desc', order: ['a'] }] },
     {
       code: 'var obj = {a:1, C:3, d:4, b:2, E:5}',
@@ -179,8 +188,9 @@ const test = {
       code: 'var obj = {E:5, C:3, a:1, d:4, b:2}',
       options: ['custom', { orderBy: 'desc', order: ['E', 'C', 'a', 'd', 'b'], caseSensitive: true }],
     },
-    { code: 'var obj = {e:5, b:2, a:1, c:3, d:4}', options: ['custom', { orderBy: 'asc', order: ['e', 'b'] }] },
     { code: 'var obj = {e:5, b:2, d:4, a:1, c:3}', options: ['custom', { orderBy: 'none', order: ['e', 'b'] }] },
+    { code: 'var obj = {b:2, e:5, d:4, c:3,  a:1}', options: ['custom', { orderBy: 'unknown', order: ['b', 'e'] }] },
+    { code: 'var obj = {a:1, b:2, c:3, d:4, e:5}', options: ['custom', { orderBy: '', order: [] }] },
     { code: 'var obj = {a:1, b:2, c:3, d:4, e:5}', options: ['custom', { order: [] }] },
     { code: 'var obj = {c:3, a:1, b:2, d:4, e:5}', options: ['custom', { order: ['c'] }] },
     { code: 'var obj = {e:5, b:2, a:1, c:3, d:4}', options: ['custom', { order: ['e', 'b'] }] },
